@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="/node_modules/@shoelace-style/shoelace/cdn/themes/dark.css" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: linear-gradient(rgb(8, 5, 47), rgb(47, 3, 10));
+    }
+    .form-container {
+      width: 600px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      color: white;
+    }
+    .form-content {
+      display: grid;
+      gap: 15px;
+      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto Mono', monospace;
+    }
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+    .alert-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+  </style>
+    <div class="form-container">
+      <sl-form class="form-content">
+        <center>
+          <h2 slot="header">Register new repair</h2>
+        </center>
+        
+        
+        <sl-input pill label="Phone number" placeholder="Enter phone number"></sl-input>
+        <div class="form-row">
+          <sl-input pill label="First name" placeholder="Enter first name" style="width: 49%;"></sl-input>
+          <sl-input pill label="Last name" placeholder="Enter last name" style="width: 49%;"></sl-input>
+        </div>
+        <sl-input pill label="Model" placeholder="Enter model"></sl-input>
+        <sl-input pill label="Problem description" placeholder="Short problem description"></sl-input>
+        
+        <div class="form-row">
+          <sl-input pill label="Tool type" placeholder="Enter tool type" style="width: 49%;"></sl-input>
+          <sl-select style="width: 49%;" placement="bottom" pill  label="Power type">
+            <sl-option pill value="option-1">Option 1</sl-option>
+            <sl-option pill value="option-2">Option 2</sl-option>
+            <sl-option pill value="option-3">Option 3</sl-option>
+            <sl-option pill value="option-4">Option 4</sl-option>
+            <sl-option pill value="option-5">Option 5</sl-option>
+            <sl-option pill value="option-6">Option 6</sl-option>
+          </sl-select>
+        </div>
+        <sl-button class="button" id="fff" variant="danger" outline color="white" onclick="resetForm()">
+          Register new repair
+        </sl-button>
+        
+      </sl-form>
+      
+      <div class="alert-container">
+        <sl-alert id="alerty" type="success"  closable>
+          Repair registered successfully
+        </sl-alert>
+      </div>
+    </div>
+
+  <script>
+    const alert = document.getElementById('alerty');
+    
+    function resetForm() {
+      alert.show();
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/node_modules/@shoelace-style/shoelace/cdn/shoelace-autoloader.js" type="module"></script>
+    
+</body>
+</html>
